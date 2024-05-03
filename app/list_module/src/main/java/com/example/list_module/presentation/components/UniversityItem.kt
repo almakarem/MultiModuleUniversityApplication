@@ -1,6 +1,7 @@
 package com.example.universitylistapp.presentation
 
 import android.content.Intent
+import android.widget.Toast
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -24,7 +25,6 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.example.details_module.presentation.DetailsActivity
 import com.example.list_module.presentation.ui.theme.MultiModuleUniversityApplicationTheme
 import com.example.presentation.University
 
@@ -38,11 +38,14 @@ fun UniversityItem(
         elevation = CardDefaults.cardElevation(2.dp),
         modifier = Modifier.clickable {
 
-            val intent = Intent(context, DetailsActivity::class.java)
-            if (intent != null) {
-                intent.putExtra("university", university.name)
-                context.startActivity(intent)
+            val packageName = "com.example.details_module"
+            val launchIntent = context.packageManager.getLaunchIntentForPackage(packageName)
+            if (launchIntent != null) {
+                context.startActivity(launchIntent)
+            } else {
+                Toast.makeText(context, "App not installed!", Toast.LENGTH_SHORT).show()
             }
+
 
 
         }

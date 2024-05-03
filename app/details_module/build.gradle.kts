@@ -78,6 +78,8 @@ dependencies {
     implementation("androidx.hilt:hilt-navigation-compose:1.2.0")
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation("com.google.android.material:material:1.11.0")
+    implementation(project(":app:list_module"))
+    implementation(project(":app:list_module"))
 
     kapt("com.google.dagger:hilt-android-compiler:2.49") // Adjusted to match implementation
 

@@ -11,6 +11,8 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.paging.compose.collectAsLazyPagingItems
 import com.example.details_module.presentation.components.UniversityDetail
 import com.example.details_module.presentation.ui.theme.MultiModuleUniversityApplicationTheme
+import com.example.presentation.University
+import com.example.presentation.UniversityViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
