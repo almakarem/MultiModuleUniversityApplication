@@ -2,7 +2,7 @@ package com.example.list_module.data.mappers
 
 import android.util.Log
 import com.example.universitylistapp.data.local.UniversityEntity
-import com.example.universitylistapp.data.remote.dto.University
+import com.example.presentation.University
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 

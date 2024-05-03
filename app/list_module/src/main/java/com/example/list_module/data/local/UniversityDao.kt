@@ -4,7 +4,7 @@ import androidx.paging.PagingSource
 import androidx.room.Dao
 import androidx.room.Query
 import androidx.room.Upsert
-import com.example.universitylistapp.data.remote.dto.University
+import com.example.presentation.University
 
 @Dao
 interface UniversityDao {

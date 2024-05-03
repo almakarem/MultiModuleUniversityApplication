@@ -1,6 +1,6 @@
 package com.example.universitylistapp.data.remote
 
-import com.example.universitylistapp.data.remote.dto.University
+import com.example.presentation.University
 import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Query

@@ -17,7 +17,7 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import androidx.paging.LoadState
 import androidx.paging.compose.LazyPagingItems
-import com.example.universitylistapp.data.remote.dto.University
+import com.example.presentation.University
 
 @Composable
 fun UniversitiesScreen(

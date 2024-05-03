@@ -24,10 +24,9 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import androidx.core.content.ContextCompat.startActivity
-import com.example.details_module.DetailsActivity
+import com.example.details_module.presentation.DetailsActivity
 import com.example.list_module.presentation.ui.theme.MultiModuleUniversityApplicationTheme
-import com.example.universitylistapp.data.remote.dto.University
+import com.example.presentation.University
 
 @Composable
 fun UniversityItem(
@@ -38,9 +37,14 @@ fun UniversityItem(
     Card(
         elevation = CardDefaults.cardElevation(2.dp),
         modifier = Modifier.clickable {
+
             val intent = Intent(context, DetailsActivity::class.java)
-            intent.putExtra("university", university.name)
-            context.startActivity(intent)
+            if (intent != null) {
+                intent.putExtra("university", university.name)
+                context.startActivity(intent)
+            }
+
+
         }
     ) {
         Row(
@@ -89,7 +93,8 @@ fun UniversityItemPreview(){
                 stateProvince = "Abu Dhabi",
                 webPages = listOf("https://mbzuai.ac.ae/"),
                 alpha_two_code = "AE"
-            ))
+            )
+        )
 
     }
 }
